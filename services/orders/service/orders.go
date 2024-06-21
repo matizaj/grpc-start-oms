@@ -19,3 +19,7 @@ func (s *OrderService) CreateOrder(ctx context.Context, order *orders.Order) err
 	orderList=append(orderList, order)
 	return nil
 }
+
+func (s *OrderService) GetOrders(ctx context.Context) ([]*orders.Order, error) {
+	return orderList, nil
+}

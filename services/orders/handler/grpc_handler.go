@@ -39,3 +39,14 @@ func (h *OrdersGrpcHandler) CreateOrder(ctx context.Context, r *orders.CreateOrd
 	res := &orders.CreateOrderResponse{Status: "order created!"}
 	return res, nil
 }
+
+func (h *OrdersGrpcHandler) GetOrders( ctx context.Context, r *orders.GetOrderRequest) (*orders.GetOrderResponse, error) {
+	o, err := h.orderService.GetOrders(ctx)
+	if err != nil {
+		return nil, err
+	}
+	res := &orders.GetOrderResponse{
+		Orders: o,
+	}
+	return res, nil
+}

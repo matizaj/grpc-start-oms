@@ -2,7 +2,8 @@ syntax="proto3";
 option go_package="github.com/matizaj/grpc-start-oms/common";
 
 service OrderService {
-    rpc CreateOrder(CreateOrderRequest) returns(CreateOrderResponse);
+    rpc CreateOrder(CreateOrderRequest) returns(CreateOrderResponse){}
+    rpc GetOrders(GetOrderRequest) returns(GetOrderResponse){}
 }
 
 message CreateOrderRequest {

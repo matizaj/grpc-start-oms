@@ -6,3 +6,6 @@ Content-Type: "application/json"
     "OrderId":11,
     "Quantity":11
 }
+
+###
+GET http://localhost:7000/

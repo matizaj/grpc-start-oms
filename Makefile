@@ -5,3 +5,6 @@ gen:
 run-orders:
 	@go run .\services\orders\
 	
+run-kitchen:
+	@go run .\services\kitchen\
+	
